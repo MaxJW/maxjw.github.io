@@ -15,5 +15,15 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 
-    z-index: -1;
+    position: relative;
+    z-index: 1;
+}
+
+.profile {
+    position: fixed;
+    z-index: 99;
+}
+
+.profile img {
+    width: 10%;
 }
