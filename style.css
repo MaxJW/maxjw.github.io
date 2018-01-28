@@ -1,18 +1,19 @@
 body, html {
     margin: 0;
     background-image: url("assets/bg-dark.jpg");
-    height: 100%; 
-
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .profile {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+    /*background-color: purple;*/
 }
 
 .profile img {
@@ -20,5 +21,109 @@ body, html {
     margin-right: auto;
     display: block;
     border-radius: 50%;
-    width: 100%;
+    width: 40%;
+    margin-bottom: 30px;
+    box-shadow: none;
+    transition: box-shadow 0.25s;
 }
+
+.profile img:hover {
+    box-shadow: 0 1px 8px black;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.heading h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #D3D3D3;
+}
+
+.links {
+    position: fixed;
+    width: 100%;
+    /*background-color: red;*/
+}
+
+.links ul {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.links li {
+    list-style-type: none;
+    left: -22px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip:before,
+.tooltip:after {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.tooltip:after {
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(0,0,0,.75); 
+    border-left: 6px solid transparent;
+    content: '';
+    height: 0;
+    top: 20px;
+    left: 5px;
+    width: 0;
+}
+
+.tooltip:before {
+    background: rgba(0,0,0,.75);
+    border-radius: 2px;
+    color: #fff;
+    content: attr(data-title);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    padding: 6px 10px;
+    top: 26px;
+    white-space: nowrap;
+}
+
+.tooltip.fade:after,
+.tooltip.fade:before {
+    transform: translate3d(0,-10px,0);
+    transition: all .15s ease-in-out;
+}
+.tooltip.fade:hover:after,
+.tooltip.fade:hover:before {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+a { color:white }
+a:hover { text-decoration: none; color:black; }
