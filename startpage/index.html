@@ -20,6 +20,20 @@
     <div id="search">
         <input id="search-field" type="text" value="" placeholder="Search" name="search-field" onkeypress="return search(event)" />
     </div>
+    <div class="search-container-mobile" id="search-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="showSearch();return false;">
+            <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="search-container-mobile" id="hide-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="hideSearch();return false;">
+            <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
     <div class="weather-container" id="weather">
         <div class="row">
             <a href="https://www.bbc.co.uk/weather/0/2650752" style="text-decoration: none; color: #fff">
@@ -213,6 +227,24 @@
                 document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/?nature")';
             }
         });
+
+        function showSearch() {
+            document.getElementById('search-mobile').style.display = 'none';
+            document.getElementById('hide-mobile').style.display = 'flex';
+
+            document.getElementById('search').style.display = 'flex';
+            document.getElementById('search-field').focus();
+        }
+
+        function hideSearch() {
+            document.getElementById('search-field').value = '';
+            document.getElementById('search-field').blur();
+            document.getElementById('search').style.display = 'none';
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/?nature")';
+
+            document.getElementById('search-mobile').style.display = 'flex';
+            document.getElementById('hide-mobile').style.display = 'none';
+        }
     </script>
 </body>
 
