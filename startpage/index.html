@@ -35,7 +35,7 @@
             <div class="bookmark-set">
                 <div class="bookmark-title"><i class="fas fa-pencil-alt"></i> Daily</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://mail.google.com/mail/u/0/">Gmail</a>
+                    <a class="bookmark" id="screensizetemp" href="https://mail.google.com/mail/u/0/">Gmail</a>
                     <a class="bookmark" href="https://calendar.google.com/calendar/">Calendar</a>
                     <a class="bookmark" href="https://github.com/">GitHub</a>
                     <a class="bookmark" href="https://my.dundee.ac.uk/">MyDundee</a>
@@ -126,6 +126,7 @@
             setInterval(() => {
                 document.getElementById("date").innerHTML = getDate();
             }, 100000);
+            document.getElementByID("screensizetemp").innerHTML = w + "w x " + h;
             /*w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
             h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);*/
             document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
