@@ -129,7 +129,7 @@
             document.getElementById("screensizetemp").innerHTML = w + "w x " + h;
             /*w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
             h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);*/
-            document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/?nature")';
         }
         
         /*function onResize() {
@@ -200,7 +200,7 @@
                     break;
                 default:
                     /*sback.style.backgroundColor = '#272727';*/
-                    document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+                    document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/?nature")';
             }
         };
         document.addEventListener("keydown", event => {
@@ -211,7 +211,7 @@
                 document.getElementById('search-field').value = '';
                 document.getElementById('search-field').blur();
                 document.getElementById('search').style.display = 'none';
-                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/?nature")';
             }
         });
     </script>
