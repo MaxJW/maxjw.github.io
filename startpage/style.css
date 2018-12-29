@@ -71,7 +71,6 @@ body {
 }
 
 .weather-container {
-    position: fixed;
     top: 1rem;
     right: 1rem;
     font-family: "Montserrat", sans-serif;
