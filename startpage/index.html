@@ -126,7 +126,7 @@
             setInterval(() => {
                 document.getElementById("date").innerHTML = getDate();
             }, 100000);
-            document.getElementByID("screensizetemp").innerHTML = w + "w x " + h;
+            document.getElementById("screensizetemp").innerHTML = w + "w x " + h;
             /*w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
             h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);*/
             document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
