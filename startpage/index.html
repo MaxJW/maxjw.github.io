@@ -105,7 +105,7 @@
         window.onload = () => {
             let xhr = new XMLHttpRequest();
             // Request to open weather map
-            xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?id=2650752&units=metric&appid=d2e4d541802b524195b9b8f1544ef756');
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=2650752&units=metric&appid=d2e4d541802b524195b9b8f1544ef756');
             xhr.onload = () => {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
