@@ -6,6 +6,72 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #13131D;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+#page2 {
+    display: none;
+}
+
+.githublinks {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+}
+
+.card {
+    background-color: white;
+    position: relative;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    transition: box-shadow 0.25s;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.card:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.card-content {
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0px 0px 14px 14px;
+    padding: 0px;
+    z-index: 99999;
+}
+
+.card-content p {
+    transition: all .5s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #161616;
+}
+
+.card img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    display: block;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
 }
 
 .profile {
@@ -35,11 +101,6 @@ body, html {
 .heading {
     width: 100%;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility;
 }
 
 .heading h1 {
@@ -56,6 +117,20 @@ body, html {
     margin-top: 10px;
     margin-bottom: 30px;
     color: #D3D3D3;
+}
+
+.movepage {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto 0;
+    /*background: green;*/
+}
+
+.movepage h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .links {
@@ -104,11 +179,6 @@ body, html {
     border-radius: 2px;
     color: #fff;
     content: attr(data-title);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    -webkit-font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility;
     font-size: 14px;
     padding: 6px 10px;
     top: 26px;
@@ -128,3 +198,11 @@ body, html {
 
 a { color:white }
 a:hover { text-decoration: none; color:black; }
+
+.delay-05s {
+    animation-delay: 500ms;
+}
+
+.delay-15s {
+    animation-delay: 1500ms;
+}
