@@ -229,6 +229,12 @@ a:hover {
         margin: 0 auto;
         margin-bottom: 20px;
     }
+
+    .idark {
+        padding: 6px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, .75);
+    }
 }
 
 /* Desktops and laptops ----------- */
