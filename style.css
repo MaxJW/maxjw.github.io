@@ -36,6 +36,7 @@ html {
     transition: box-shadow 0.25s;
     overflow: hidden;
     margin: 0 auto;
+    position: relative;
 }
 
 .card:hover {
@@ -47,7 +48,17 @@ html {
     transform: scale(1.2);
 }
 
+.card .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
 .card-content {
+    pointer-events: none;
     margin-bottom: 0px;
     position: absolute;
     bottom: 0;
@@ -55,7 +66,7 @@ html {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0px 0px 14px 14px;
     padding: 0px;
-    z-index: 99999;
+    z-index: 2;
 }
 
 .card-content p {
@@ -64,6 +75,20 @@ html {
     font-weight: bold;
     margin-left: 10px;
     color: #161616;
+}
+
+.card-content a {
+    pointer-events: all;
+    color: #161616;
+}
+
+.card-content a:hover {
+    color: #949494;
+}
+
+.card-content .icon {
+    margin-right: 20px;
+    z-index: 9999999999;
 }
 
 .card img {
