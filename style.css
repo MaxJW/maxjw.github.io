@@ -63,7 +63,7 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.86);
     border-radius: 0px 0px 14px 14px;
     padding: 0px;
     z-index: 2;
@@ -233,8 +233,20 @@ a:hover {
     color: black;
 }
 
+.delay-025s {
+    animation-delay: 250ms;
+}
+
 .delay-05s {
     animation-delay: 500ms;
+}
+
+.delay-075s {
+    animation-delay: 750ms;
+}
+
+.delay-125s {
+    animation-delay: 1250ms;
 }
 
 .delay-15s {
