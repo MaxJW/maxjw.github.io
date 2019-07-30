@@ -6,6 +6,7 @@
 	<title>MaxJW</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Max Wilson - Student studying computer science">
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69981801-2"></script>
 	<script>
@@ -70,7 +71,7 @@
 			<div class="card animated flipInX">
 				<a href="https://github.com/MaxJW/Overturned" class="overlay"></a>
 					<div class="card-content">
-						<div style="float:left;"><p class="">Overturned | Game Project</p></div>
+						<div style="float:left;"><p>Overturned | Game Project</p></div>
 						<div style="clear:both;"></div>
 					</div>
 					<img src="https://repository-images.githubusercontent.com/170237655/79f28080-929c-11e9-9b84-29c778a7953e">
@@ -78,7 +79,7 @@
 			<div class="card animated flipInX delay-025s">
 				<a href="https://github.com/MaxJW/maxjw.github.io" class="overlay"></a>
 					<div class="card-content">
-						<div style="float:left;"><p class="">maxjw.github.io | Website</p></div>
+						<div style="float:left;"><p>maxjw.github.io | Website</p></div>
 						<div style="float:right;" class="icon"><p><a href="https://www.maxwilson.co.uk/"><i class="fas fa-link"></i></a></p></div>
 						<div style="clear:both;"></div>
 					</div>
@@ -87,7 +88,7 @@
 			<div class="card animated flipInX delay-05s">
 				<a href="https://github.com/MaxJW/Startpage" class="overlay"></a>
 					<div class="card-content">
-						<div style="float:left;"><p class="">Starter Page | Website</p></div>
+						<div style="float:left;"><p>Starter Page | Website</p></div>
 						<div style="float:right;" class="icon"><p><a href="https://www.maxwilson.co.uk/startpage"><i class="fas fa-link"></i></a></p></div>
 						<div style="clear:both;"></div>
 					</div>
@@ -96,7 +97,7 @@
 			<div class="card animated flipInX delay-075s">
 				<a href="https://github.com/MaxJW/tfthelper" class="overlay"></a>
 					<div class="card-content">
-						<div style="float:left;"><p class="">TFT Helper | Website</p></div>
+						<div style="float:left;"><p>TFT Helper | Website</p></div>
 						<div style="float:right;" class="icon"><p><a href="https://www.maxwilson.co.uk/tfthelper"><i class="fas fa-link"></i></a></p></div>
 						<div style="clear:both;"></div>
 					</div>
@@ -105,8 +106,8 @@
 			<div class="card animated flipInX delay-1s">
 				<a href="#" class="overlay"></a>
 					<div class="card-content">
-						<div style="float:left;"><p class="">Mototek | Website</p></div>
-						<div style="float:right;" class="icon"><p><a id="ss" href="#"><i class="fas fa-eye-slash"></i></a></p></div>
+						<div style="float:left;"><p>Mototek | Website</p></div>
+						<div style="float:right;" class="icon"><p><a href="https://www.maxwilson.co.uk/mototek"><i class="fas fa-link"></i></a></p></div>
 						<div style="clear:both;"></div>
 					</div>
 					<img src="https://repository-images.githubusercontent.com/198251882/8495a080-acb4-11e9-8866-a780ab4a9d02">
@@ -116,39 +117,6 @@
 			<h1><a onclick="move(this)" mover="page1" moveto="page2" id="arrup"><i class="fas fa-arrow-up fa-lg idark"></i></a></h1>
 		</div>
 	</div>
-	<script>
-		var allowedKeys = {
-			37: 'left',
-			38: 'up',
-			39: 'right',
-			40: 'down',
-			65: 'a',
-			66: 'b'
-		};
-
-		var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
-		var konamiCodePosition = 0;
-		var sele = document.getElementById("ss");
-
-		document.addEventListener('keydown', function (e) {
-			var key = allowedKeys[e.keyCode];
-			var requiredKey = konamiCode[konamiCodePosition];
-
-			if (key == requiredKey) {
-				konamiCodePosition++;
-				if (konamiCodePosition == konamiCode.length) {
-					activateCheats();
-					konamiCodePosition = 0;
-				}
-			} else {
-				konamiCodePosition = 0;
-			}
-		});
-
-		function activateCheats() {
-			sele.href = "https://www.maxwilson.co.uk/mototek/";
-		}
-	</script>
 </body>
 
 </html>
