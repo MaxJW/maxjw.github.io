@@ -30,6 +30,12 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 	<script>
+			var host = "maxwilson.co.uk";
+			if ((host == window.location.host) && (window.location.protocol != "https:"))
+				window.location.protocol = "https";
+			</script>
+
+	<script>
 		function move(e) {
 			var mover = e.getAttribute("mover");
 			var moveto = e.getAttribute("moveto");
