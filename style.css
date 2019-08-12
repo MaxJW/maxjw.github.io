@@ -1,7 +1,6 @@
 body,
 html {
     margin: 0;
-    background-image: url("assets/bg-dark.webp");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,6 +12,14 @@ html {
     font-variant: normal;
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: optimizeLegibility;
+}
+
+.webp body {
+    background-image: url("assets/bg-dark.webp");
+}
+
+.no-webp body {
+    background-image: url("assets/bg-dark.jpg");
 }
 
 #page2 {
