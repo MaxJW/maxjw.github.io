@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: maxwilson.co.uk
-Token: 67b8eb98e7b34c915d2d5fa507d2e34c3f2bcf5fb78a7b0cbcca484106bf4b56
