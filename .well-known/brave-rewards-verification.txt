@@ -1,0 +1,8 @@
+---
+layout: none
+permalink: .well-known/brave-payments-verification.txt
+---
+This is a Brave Rewards publisher verification file.
+
+Domain: maxwilson.co.uk
+Token: 44efb4e48d81ee7de36585982203806ebe0debdf588a08d98d6705a21d751d57
