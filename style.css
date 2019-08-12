@@ -157,7 +157,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .links {
@@ -225,7 +224,8 @@ html {
 }
 
 a {
-    color: white
+    color: white;
+    cursor: pointer;
 }
 
 a:hover {
