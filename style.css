@@ -275,8 +275,8 @@ a:hover {
     }
 
     .idark {
-        padding: 6px;
-        border-radius: 5px;
+        padding: 7px 4px;
+        border-radius: 50%;
         background-color: rgba(0, 0, 0, .75);
     }
     
