@@ -40,6 +40,7 @@ html {
     height:auto;
     max-height:calc(100% - 7rem);
     overflow:auto;
+    overflow-x: hidden;
 }
 
 .githublinks > :last-child {
