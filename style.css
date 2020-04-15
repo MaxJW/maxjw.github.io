@@ -240,25 +240,13 @@ a:hover {
     color: black;
 }
 
-.delay-025s {
-    animation-delay: 250ms;
-}
-
-.delay-05s {
-    animation-delay: 500ms;
-}
-
-.delay-075s {
-    animation-delay: 750ms;
-}
-
-.delay-125s {
-    animation-delay: 1250ms;
-}
-
-.delay-15s {
-    animation-delay: 1500ms;
-}
+.delay-025s { animation-delay: 250ms; }
+.delay-05s { animation-delay: 500ms; }
+.delay-075s { animation-delay: 750ms; }
+.delay-125s { animation-delay: 1250ms; }
+.delay-15s { animation-delay: 1500ms; }
+.delay-175s { animation-delay: 1750ms; }
+.delay-2s { animation-delay: 2000ms; }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 700px) {
@@ -279,7 +267,7 @@ a:hover {
         border-radius: 50%;
         background-color: rgba(0, 0, 0, .75);
     }
-    
+
     .links ul {
         width: 69%;
     }
