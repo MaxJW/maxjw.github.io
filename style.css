@@ -22,6 +22,11 @@ html {
     background-image: url("assets/bg-dark.jpg");
 }
 
+#page1, #page2 {
+    height: 100%;
+    margin: 0;
+}
+
 #page2 {
     display: none;
 }
@@ -32,6 +37,13 @@ html {
     grid-template-columns: auto auto auto;
     /*min-width: 350px;*/
     padding: 5rem;
+    height:auto;
+    max-height:calc(100% - 7rem);
+    overflow:auto;
+}
+
+.githublinks > :last-child {
+    margin-bottom: 0px;
 }
 
 .card {
@@ -157,7 +169,6 @@ html {
     bottom: 0;
     width: 100%;
     margin: 0 auto 0;
-    /*background: green;*/
 }
 
 .movepage h1 {
@@ -260,12 +271,6 @@ a:hover {
         display: block;
         margin: 0 auto;
         margin-bottom: 20px;
-    }
-
-    .idark {
-        padding: 7px 4px;
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, .75);
     }
 
     .links ul {
