@@ -194,6 +194,7 @@ html {
 .links li {
     list-style-type: none;
     left: -22px;
+    font-size: 1.2em;
 }
 
 .tooltip {
@@ -245,6 +246,7 @@ html {
 a {
     color: white;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 a:hover {
