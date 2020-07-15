@@ -135,6 +135,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 350px;
+    pointer-events: none;
 }
 
 .profile img {
@@ -146,6 +147,7 @@ html {
     margin-bottom: 30px;
     box-shadow: none;
     transition: box-shadow 0.25s;
+    pointer-events: all;
 }
 
 .profile img:hover {
@@ -163,6 +165,7 @@ html {
     margin-top: 5px;
     margin-bottom: 0;
     color: white;
+    pointer-events: all;
 }
 
 .heading h2 {
@@ -171,6 +174,7 @@ html {
     margin-top: 10px;
     margin-bottom: 30px;
     color: #D3D3D3;
+    pointer-events: all;
 }
 
 .movepage {
@@ -196,6 +200,7 @@ html {
     justify-content: space-between;
     width: 57%;
     margin: 0 auto;
+    pointer-events: all;
 }
 
 .links li {
