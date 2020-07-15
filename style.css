@@ -15,11 +15,11 @@ html {
 }
 
 .webp body {
-    background-image: url("assets/bg.webp");
+    //background-image: url("assets/bg.webp");
 }
 
 .no-webp body {
-    background-image: url("assets/bg.jpg");
+    //background-image: url("assets/bg.jpg");
 }
 
 #page1, #page2 {
