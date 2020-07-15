@@ -113,7 +113,7 @@ html {
     font-weight: bold;
     margin-left: 10px;
     color: #161616;
-    max-width: 91%;
+    max-width: 95%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -280,13 +280,18 @@ a:hover {
     color: black;
 }
 
-.delay-025s { animation-delay: 250ms; }
-.delay-05s { animation-delay: 500ms; }
-.delay-075s { animation-delay: 750ms; }
-.delay-125s { animation-delay: 1250ms; }
-.delay-15s { animation-delay: 1500ms; }
-.delay-175s { animation-delay: 1750ms; }
-.delay-2s { animation-delay: 2000ms; }
+.cdelay-0 { animation-delay: 75ms; }
+.cdelay-1 { animation-delay: 150ms; }
+.cdelay-2 { animation-delay: 225ms; }
+.cdelay-3 { animation-delay: 300ms; }
+.cdelay-4 { animation-delay: 375ms; }
+.cdelay-5 { animation-delay: 450ms; }
+.cdelay-6 { animation-delay: 525ms; }
+.cdelay-7 { animation-delay: 600ms; }
+.cdelay-8 { animation-delay: 675ms; }
+.cdelay-9 { animation-delay: 750ms; }
+.cdelay-500ms { animation-delay: 500ms; }
+.cdelay-1500ms { animation-delay: 1500ms; }
 
 /* Fixed area of screen for arrow */
 @media only screen and (min-width : 701px) {
