@@ -322,3 +322,21 @@ a:hover {
         background: #212033;
     }
 }
+
+@media only screen and (min-width : 1100px) {
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #28263d;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #212033;
+    }
+}
