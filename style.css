@@ -47,7 +47,7 @@ html {
     grid-template-columns: auto auto auto;
     padding: 5rem;
     height: auto;
-    /*max-height:calc(100% - 7rem);*/
+    max-height:calc(100% - 7rem);
     overflow: auto;
     overflow-x: hidden;
 }
@@ -267,22 +267,6 @@ a:hover {
     color: black;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #28263d;
-    border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #212033;
-}
-
 .delay-025s { animation-delay: 250ms; }
 .delay-05s { animation-delay: 500ms; }
 .delay-075s { animation-delay: 750ms; }
@@ -320,5 +304,21 @@ a:hover {
 @media only screen and (max-width : 1100px) {
     .githublinks {
         grid-template-columns: auto auto;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #28263d;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #212033;
     }
 }
