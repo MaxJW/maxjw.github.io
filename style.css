@@ -14,13 +14,13 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-.webp body {
-    //background-image: url("assets/bg.webp");
+/* .webp body {
+    background-image: url("assets/bg.webp");
 }
 
 .no-webp body {
-    //background-image: url("assets/bg.jpg");
-}
+    background-image: url("assets/bg.jpg");
+} */
 
 #page1, #page2 {
     height: 100%;
@@ -35,7 +35,6 @@ html {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url((unknown));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -45,10 +44,9 @@ html {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: auto auto auto;
-    /*min-width: 350px;*/
     padding: 5rem;
     height:auto;
-    max-height:calc(100% - 7rem);
+    /*max-height:calc(100% - 7rem);*/
     overflow:auto;
     overflow-x: hidden;
 }
@@ -137,7 +135,6 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 350px;
-    /*background-color: purple;*/
 }
 
 .profile img {
