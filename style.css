@@ -277,15 +277,28 @@ a:hover {
 .delay-2s { animation-delay: 2000ms; }
 
 /* Fixed area of screen for arrow */
-@media only screen and (max-width : 770px) {
-    .githublinks {
-        max-height:calc(100% - 7rem);
-    }
-}
-
 @media only screen and (max-width : 1211px) {
     .githublinks {
         max-height:calc(100% - 16rem);
+    }
+}
+
+@media only screen and (max-width : 770px) {
+    .githublinks {
+        max-height:calc(100% - 7rem) !important;
+    }
+}
+
+/* Desktops and laptops */
+@media only screen and (max-width : 1100px) {
+    .githublinks {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width : 850px) {
+    .links ul {
+        width: 65%;
     }
 }
 
@@ -305,19 +318,6 @@ a:hover {
 
     .links ul {
         width: 69%;
-    }
-}
-
-@media only screen and (max-width : 850px) {
-    .links ul {
-        width: 65%;
-    }
-}
-
-/* Desktops and laptops */
-@media only screen and (max-width : 1100px) {
-    .githublinks {
-        grid-template-columns: auto auto;
     }
 }
 
