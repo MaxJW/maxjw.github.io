@@ -6,10 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="description" content="Max Wilson - Student studying Computer Science">
-	<meta property="og:title" content="Max Wilson Personal Website" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://www.maxwilson.co.uk/" />
-	<meta property="og:image" content="https://www.maxwilson.co.uk/assets/bg.webp" />
+
 	<!-- Favicon Links/Metadata -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=M4K5AbWmLm">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=M4K5AbWmLm">
@@ -19,6 +16,15 @@
 	<link rel="shortcut icon" href="/favicon.ico?v=M4K5AbWmLm">
 	<meta name="msapplication-TileColor" content="#13131d">
 	<meta name="theme-color" content="#13131d">
+
+	<!-- OG Metadata -->
+	<meta property="og:image" content="/og-image.jpg">
+	<meta property="og:image:width" content="1485">
+	<meta property="og:image:height" content="778">
+	<meta property="og:title" content="Max Wilson - Software Developer">
+	<meta property="og:description"
+		content="Portfolio for Max Wilson, displaying current endeavors, past projects, and social links">
+	<meta property="og:url" content="https://maxwilson.co.uk/">
 
 	<!-- Google AdSense -->
 	<script data-ad-client="ca-pub-6528299985588319" async
@@ -54,18 +60,21 @@
 	<script src="https://kit.fontawesome.com/d368698d9e.js" crossorigin="anonymous"></script>
 
 	<script>
+		//Code to switch to HTTPS
 		var host = "maxwilson.co.uk";
 		if ((host == window.location.host) && (window.location.protocol != "https:"))
 			window.location.protocol = "https";
 	</script>
 
 	<script>
+		//Code to enable the arrow page movement
 		function move(e) {
 			var mover = e.getAttribute("mover");
 			var moveto = e.getAttribute("moveto");
 			document.getElementById(mover).style.display = "block";
 			document.getElementById(moveto).style.display = "none";
 		}
+		//Code to launch the particle background canvas
 		particlesJS.load('particles-js', 'assets/particles.json', function () {
 			console.log('callback - particles.js config loaded');
 		});
