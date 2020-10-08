@@ -50,7 +50,7 @@ html {
     height: auto;
     overflow: auto;
     overflow-x: hidden;
-    max-height:calc(100% - 7rem)
+    max-height:calc(100% - 9rem)
 }
 
 .githublinks > :first-child {
