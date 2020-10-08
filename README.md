@@ -1,2 +1,2 @@
 # Welcome to my site
-Not much on here apart from social links, and a grid of my github repos I want to display there.
+A collection of my social media links and some selected projects I have worked on!
