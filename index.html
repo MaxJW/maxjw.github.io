@@ -193,20 +193,17 @@
 					<img src="assets/repo-images/craneware.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-3">
+			<div class="card animate__animated animate__flipInX cdelay-3 flipper">
 				<a href="https://github.com/MaxJW/OpenAirBooking" class="overlay"></a>
 				<div class="card-content">
-					<div class="card-title-link" style="float:left;">
+					<div class="card-title-link">
 						<p class="title">OpenAirBooking</p>
 						<p class="languages">PHP · HTML · CSS · JavaScript · MySQL</p>
 					</div>
-					<div style="float:right;" class="icon">
-						<p><a href="https://zeno.computing.dundee.ac.uk/2018-ac32006/Team3/"><i
-									class="fas fa-link"></i></a></p>
-					</div>
-					<div style="clear:both;"></div>
 					<div class="card-icon">
-						<img src="assets/icon-images/UoD.png">
+						<img src="assets/icon-images/UoD.png" class="flip-front">
+						<a href="https://zeno.computing.dundee.ac.uk/2018-ac32006/Team3/" alt="View Live Site"><img
+								src="assets/icon-images/link.png" class="flip-back"></a>
 					</div>
 				</div>
 				<picture>
@@ -236,7 +233,7 @@
 				<a href="https://github.com/MaxJW/maxjw.github.io" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title-link">
-						<p class="title">Personal Website (here!)</p>
+						<p class="title">Personal Website</p>
 						<p class="languages">HTML · CSS · JavaScript</p>
 					</div>
 					<div class="card-icon">
@@ -249,19 +246,17 @@
 					<img src="assets/repo-images/maxwilson.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-6">
+			<div class="card animate__animated animate__flipInX cdelay-6 flipper">
 				<a href="https://github.com/MaxJW/Startpage" class="overlay"></a>
 				<div class="card-content">
-					<div class="card-title-link" style="float:left;">
+					<div class="card-title-link">
 						<p class="title">Browser Start-up Page</p>
 						<p class="languages">HTML · CSS · JavaScript</p>
 					</div>
-					<div style="float:right;" class="icon">
-						<p><a href="https://www.maxwilson.co.uk/startpage"><i class="fas fa-link"></i></a></p>
-					</div>
-					<div style="clear:both;"></div>
 					<div class="card-icon">
-						<img src="android-chrome-512x512.png">
+						<img src="android-chrome-512x512.png" class="flip-front">
+						<a href="https://www.maxwilson.co.uk/startpage"><img src="assets/icon-images/link.png"
+								class="flip-back"></a>
 					</div>
 				</div>
 				<picture>
@@ -270,19 +265,17 @@
 					<img src="assets/repo-images/startpage.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-7">
+			<div class="card animate__animated animate__flipInX cdelay-7 flipper">
 				<a href="https://github.com/MaxJW/tfthelper" class="overlay"></a>
 				<div class="card-content">
-					<div class="card-title-link" style="float:left;">
+					<div class="card-title-link">
 						<p class="title">TFT Game Helper</p>
 						<p class="languages">HTML · CSS · JavaScript</p>
 					</div>
-					<div style="float:right;" class="icon">
-						<p><a href="https://www.maxwilson.co.uk/tfthelper"><i class="fas fa-link"></i></a></p>
-					</div>
-					<div style="clear:both;"></div>
 					<div class="card-icon">
-						<img src="android-chrome-512x512.png">
+						<img src="android-chrome-512x512.png" class="flip-front">
+						<a href="https://www.maxwilson.co.uk/tfthelper"><img src="assets/icon-images/link.png"
+								class="flip-back"></a>
 					</div>
 				</div>
 				<picture>
@@ -291,20 +284,17 @@
 					<img src="assets/repo-images/tfthelper.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-8">
+			<div class="card animate__animated animate__flipInX cdelay-8 flipper">
 				<a href="https://github.com/MaxJW/mototek" class="overlay"></a>
 				<div class="card-content">
-					<div class="card-title-link" style="float:left;">
+					<div class="card-title-link">
 						<p class="title">Mototek | Company Website</p>
 						<p class="languages">HTML · CSS · JavaScript</p>
 					</div>
-					<div style="float:right;" class="icon">
-						<p><a href="https://www.maxwilson.co.uk/mototek"><i class="fas fa-link"></i></a></p>
-					</div>
-					<div style="clear:both;"></div>
 					<div class="card-icon">
 						<img src="android-chrome-512x512.png" class="flip-front">
-						<img src="assets/icon-images/UoD.png" class="flip-back">
+						<a href="https://www.maxwilson.co.uk/mototek"><img src="assets/icon-images/link.png"
+								class="flip-back"></a>
 					</div>
 				</div>
 				<picture>
@@ -315,40 +305,10 @@
 			</div>
 		</div>
 		<div class="movepage animate__animated animate__flipInX cdelay-500ms">
-			<h1><a onclick="move(this)" mover="page1" moveto="page2" id="arrup"><i class="fas fa-arrow-up fa-lg"></i></a></h1>
+			<h1><a onclick="move(this)" mover="page1" moveto="page2" id="arrup"><i
+						class="fas fa-arrow-up fa-lg"></i></a></h1>
 		</div>
 	</div>
 </body>
-
-<style>
-	.cdelay-8 .card-icon {
-		transition: transform 0.8s;
-  transform-style: preserve-3d;
-	}
-	.cdelay-8:hover .card-icon {
-  transform: rotateY(180deg);
-}
-	/* Position the front and back side */
-.flip-front, .flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-</style>
 
 </html>
