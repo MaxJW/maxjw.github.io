@@ -50,11 +50,10 @@
 	<script>
 		//Code to switch to HTTPS
 		var host = "maxwilson.co.uk";
-		if ((host == window.location.host) && (window.location.protocol != "https:"))
+		if ((host == window.location.host) && (window.location.protocol != "https:")) {
 			window.location.protocol = "https";
-	</script>
+		}
 
-	<script>
 		//Code to enable the arrow page movement
 		function move(e) {
 			var mover = e.getAttribute("mover");
@@ -64,6 +63,13 @@
 		}
 		//Code to launch the particle background canvas
 		particlesJS.load('particles-js', 'assets/particles.json');
+	</script>
+
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
 	</script>
 </head>
 
