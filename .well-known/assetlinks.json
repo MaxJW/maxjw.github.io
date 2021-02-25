@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "com.max.portfolio",
+                   "sha256_cert_fingerprints": ["6B:40:FE:62:F4:B1:2C:EE:7C:10:F1:77:97:19:80:10:C3:07:18:62:EA:64:12:60:DD:1B:30:1F:B5:59:B6:A8"] }
+    }]
