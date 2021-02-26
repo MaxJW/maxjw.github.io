@@ -54,12 +54,17 @@
 			window.location.protocol = "https";
 		}
 
+		let main = true;
 		//Code to enable the arrow page movement
-		function move(e) {
-			var mover = e.getAttribute("mover");
-			var moveto = e.getAttribute("moveto");
-			document.getElementById(mover).style.display = "block";
-			document.getElementById(moveto).style.display = "none";
+		function move() {
+			main = !main;
+			if (main) {
+				document.getElementById("page2").removeAttribute("class", "show");
+				document.getElementById("arrdown").removeAttribute("class", "rotate");
+			} else {
+				document.getElementById("page2").setAttribute("class", "show");
+				document.getElementById("arrdown").setAttribute("class", "rotate");
+			}
 		}
 		//Code to launch the particle background canvas
 		particlesJS.load('particles-js', 'assets/particles.json');
@@ -102,15 +107,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="movepage animate__animated animate__flipInX cdelay-8">
-			<h1><a onclick="move(this)" mover="page2" moveto="page1" id="arrdown"><i
-						class="fas fa-arrow-down fa-lg"></i></a></h1>
-		</div>
 	</div>
 	<div id="page2">
 		<div class="githublinks">
 			<div class="featured">
-				<div class="card animate__animated animate__backInDown">
+				<div class="card">
 					<div class="notif feat">Featured</div>
 					<a href="https://new.myrentalcv.com/Login/Login" class="overlay"></a>
 					<div class="card-content">
@@ -128,7 +129,7 @@
 						<img src="assets/repo-images/MRCV.png">
 					</picture>
 				</div>
-				<div class="card animate__animated animate__backInDown flipper">
+				<div class="card flipper">
 					<div class="notif new">Latest</div>
 					<a href="https://github.com/MaxJW/Carrotodo/" class="overlay"></a>
 					<div class="card-content">
@@ -150,7 +151,7 @@
 					</picture>
 				</div>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-0">
+			<div class="card">
 				<a href="https://github.com/MaxJW/Egocentric-Video-Segmentation" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -167,7 +168,7 @@
 					<img src="assets/repo-images/ego.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-1">
+			<div class="card">
 				<a href="https://github.com/MaxJW/Overturned-Game" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -184,7 +185,7 @@
 					<img src="assets/repo-images/overturned.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-2">
+			<div class="card">
 				<a href="https://github.com/MaxJW/Craneware-Project" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -201,7 +202,7 @@
 					<img src="assets/repo-images/craneware.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-3 flipper">
+			<div class="card flipper">
 				<a href="https://github.com/MaxJW/OpenAirBooking" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -220,7 +221,7 @@
 					<img src="assets/repo-images/openair.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-4">
+			<div class="card">
 				<a href="https://github.com/MaxJW/FullStack-React-Native" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -237,7 +238,7 @@
 					<img src="assets/repo-images/fullstackreactnative.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-5">
+			<div class="card">
 				<a href="https://github.com/MaxJW/maxjw.github.io" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -254,7 +255,7 @@
 					<img src="assets/repo-images/maxwilson.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-6 flipper">
+			<div class="card flipper">
 				<a href="https://github.com/MaxJW/Startpage" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -274,7 +275,7 @@
 					<img src="assets/repo-images/startpage.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-7 flipper">
+			<div class="card flipper">
 				<a href="https://github.com/MaxJW/tfthelper" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -294,7 +295,7 @@
 					<img src="assets/repo-images/tfthelper.png">
 				</picture>
 			</div>
-			<div class="card animate__animated animate__flipInX cdelay-8 flipper">
+			<div class="card flipper">
 				<a href="https://github.com/MaxJW/mototek" class="overlay"></a>
 				<div class="card-content">
 					<div class="card-title">
@@ -315,10 +316,9 @@
 				</picture>
 			</div>
 		</div>
-		<div class="movepage animate__animated animate__flipInX cdelay-500ms">
-			<h1><a onclick="move(this)" mover="page1" moveto="page2" id="arrup"><i
-						class="fas fa-arrow-up fa-lg"></i></a></h1>
-		</div>
+	</div>
+	<div id="move-arrow" class="movepage animate__animated animate__fadeInDown cdelay-8">
+		<h1><a onclick="move()" id="arrdown"><i class="fas fa-arrow-down fa-lg"></i></a></h1>
 	</div>
 </body>
 
