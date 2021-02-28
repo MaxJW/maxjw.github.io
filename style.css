@@ -22,7 +22,8 @@ html {
 #page2 {
     position: absolute;
     top: -100vh;
-    transition: 0.25s;
+    -webkit-transition: 0.75s ease;
+    transition: 0.75s ease;
 }
 
 #page2.show {
@@ -75,7 +76,7 @@ html {
     display: inline-grid;
     border-radius: 10px;
     box-shadow: none;
-    transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s ease;
     position: relative;
 }
 
@@ -207,7 +208,7 @@ picture {
 
 /* Flip icon for link to site */
 .flipper .card-icon {
-    transition: transform 0.6s;
+    transition: transform 0.6s ease;
     transform-style: preserve-3d;
 }
 
@@ -263,7 +264,7 @@ picture {
     width: 40%;
     margin-bottom: 26px;
     box-shadow: none;
-    transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s ease;
     pointer-events: all;
 }
 
@@ -304,7 +305,7 @@ picture {
     bottom: 0;
     width: 100%;
     margin: 0 auto 0;
-    transition: 0.25s;
+    transition: 0.25s ease;
 }
 
 .movepage h1 {
@@ -383,7 +384,7 @@ picture {
 a {
     color: white;
     cursor: pointer;
-    transition: 0.25s;
+    transition: 0.25s ease;
 }
 
 .cdelay-0 {
