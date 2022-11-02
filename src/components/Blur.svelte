@@ -10,9 +10,8 @@
         el = document.getElementById('blur');
     });
     $: opacityVal = clamp(y / 150 ?? 0, 0, 6);
-    $: el &&
-        el.style.setProperty('backdrop-filter', `blur(${opacityVal}px)`) &&
-        el.style.setProperty('-webkit-backdrop-filter', `blur(${opacityVal}px)`);
+    $: el && el.style.setProperty('backdrop-filter', `blur(${opacityVal}px)`);
+    $: el && el.style.setProperty('-webkit-backdrop-filter', `blur(${opacityVal}px)`);
 </script>
 
 <svelte:window bind:scrollY={y} />
