@@ -3,7 +3,13 @@
     import { fly } from 'svelte/transition';
     import Fa from 'svelte-fa';
     import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-    import { faGithub, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+    import {
+        faGithub,
+        faLinkedin,
+        faTwitter,
+        faYoutube,
+        faMastodon,
+    } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <OnMount>
@@ -74,6 +80,15 @@
                 data-title="@MaxJW_"
             >
                 <Fa icon={faTwitter} size="lg" />
+            </a>
+            <a
+                href="https://mastodon.scot/@maxjw"
+                aria-label="Mastodon link"
+                class="tooltip"
+                rel="me"
+                data-title="@maxjw@mastodon.scot"
+            >
+                <Fa icon={faMastodon} size="lg" />
             </a>
             <a
                 href="https://www.youtube.com/@MaxJW_"
