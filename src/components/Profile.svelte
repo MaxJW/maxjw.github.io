@@ -6,9 +6,9 @@
     import {
         faGithub,
         faLinkedin,
-        faTwitter,
+        faXTwitter,
         faYoutube,
-        faMastodon,
+        faInstagram,
     } from '@fortawesome/free-brands-svg-icons';
 </script>
 
@@ -79,16 +79,15 @@
                 class="tooltip"
                 data-title="@MaxJW_"
             >
-                <Fa icon={faTwitter} size="lg" />
+                <Fa icon={faXTwitter} size="lg" />
             </a>
             <a
-                href="https://mastodon.scot/@maxjw"
-                aria-label="Mastodon link"
+                href="https://www.instagram.com/maxjwilson_/"
+                aria-label="Instagram link"
                 class="tooltip"
-                rel="me"
-                data-title="@maxjw@mastodon.scot"
+                data-title="maxjwilson_"
             >
-                <Fa icon={faMastodon} size="lg" />
+                <Fa icon={faInstagram} size="lg" />
             </a>
             <a
                 href="https://www.youtube.com/@MaxJW_"
