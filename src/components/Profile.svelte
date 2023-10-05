@@ -9,6 +9,7 @@
         faXTwitter,
         faYoutube,
         faInstagram,
+        faThreads,
     } from '@fortawesome/free-brands-svg-icons';
 </script>
 
@@ -66,7 +67,7 @@
                 <Fa icon={faGithub} size="lg" />
             </a>
             <a
-                href="https://www.linkedin.com/in/maxjwilson-1"
+                href="https://linkedin.com/in/maxjwilson-1"
                 aria-label="LinkedIn link"
                 class="tooltip"
                 data-title="Max Wilson"
@@ -82,7 +83,15 @@
                 <Fa icon={faXTwitter} size="lg" />
             </a>
             <a
-                href="https://www.instagram.com/maxjwilson_/"
+                href="https://threads.net/@maxjwilson_"
+                aria-label="Threads link"
+                class="tooltip"
+                data-title="@maxjwilson_"
+            >
+                <Fa icon={faThreads} size="lg" />
+            </a>
+            <a
+                href="https://instagram.com/maxjwilson_/"
                 aria-label="Instagram link"
                 class="tooltip"
                 data-title="maxjwilson_"
@@ -90,7 +99,7 @@
                 <Fa icon={faInstagram} size="lg" />
             </a>
             <a
-                href="https://www.youtube.com/@MaxJW_"
+                href="https://youtube.com/@MaxJW_"
                 aria-label="YouTube link"
                 class="tooltip"
                 data-title="@MaxJW_"
@@ -160,7 +169,7 @@
     .links {
         text-align: center;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     /* setup tooltips */
