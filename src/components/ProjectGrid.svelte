@@ -17,21 +17,48 @@
                 notif_colour="#6256a5"
             />
             <Project
-                link="https://marvel.maxwilson.co.uk/"
-                title="Upcoming Marvel Releases"
-                languages="Svelte · HTML · CSS · JavaScript"
+                link="https://github.com/MaxJW/Monch"
+                title="Monch - Recipe Manager"
+                languages="SvelteKit · TypeScript · TailwindCSS"
                 source="Website"
                 icon="personal.png"
-                image="marvel.png"
-                image_webp="marvel.webp"
+                image="monch.png"
+                image_webp="monch.webp"
                 notif_text="Latest"
                 notif_colour="#f8d53a"
             />
         </div>
         <Project
+            link="https://github.com/MaxJW/WeddingJeopardy"
+            title="Wedding Jeopardy"
+            languages="Svelte · JavaScript · HTML · CSS"
+            source="Website"
+            icon="personal.png"
+            image="wedjeo.png"
+            image_webp="wedjeo.webp"
+        />
+        <Project
+            link="https://github.com/MaxJW/GroomsmaidPhotoChallenge"
+            title="Photo Challenges"
+            languages="Svelte · JavaScript · HTML · CSS"
+            source="Website"
+            icon="personal.png"
+            image="photochallenge.png"
+            image_webp="photochallenge.webp"
+        />
+        <Project
+            link="https://marvel.maxwilson.co.uk/"
+            title="Upcoming Marvel Releases"
+            languages="Svelte · JavaScript · HTML · CSS"
+            source="Website"
+            icon="personal.png"
+            image="marvel.png"
+            image_webp="marvel.webp"
+        />
+        <Project
             link="https://todo.maxwilson.co.uk/"
             title="🥕 Carrotodo"
-            languages="Svelte · HTML · CSS · JavaScript"
+            languages="Svelte · JavaScript · HTML · CSS"
             source="Website"
             icon="personal.png"
             image="todo.png"
@@ -58,7 +85,7 @@
         <Project
             link="https://github.com/MaxJW/Craneware-Project"
             title="Price Doctor"
-            languages="Angular · HTML · CSS · JavaScript · MongoDB"
+            languages="Angular · JavaScript · MongoDB · HTML · CSS"
             source="Craneware"
             icon="CW.png"
             image="craneware.png"
@@ -67,7 +94,7 @@
         <Project
             link="https://zeno.computing.dundee.ac.uk/2018-ac32006/Team3/index.php"
             title="OpenAirBooking"
-            languages="PHP · HTML · CSS · JavaScript · MySQL"
+            languages="PHP · JavaScript · MySQL · HTML · CSS"
             source="University of Dundee"
             icon="UoD.png"
             image="openair.png"
@@ -85,7 +112,7 @@
         <Project
             link="https://github.com/MaxJW/maxjw.github.io"
             title="Personal Website"
-            languages="Svelte · HTML · CSS · JavaScript"
+            languages="Svelte · JavaScript · HTML · CSS"
             source="Website"
             icon="personal.png"
             image="maxwilson.png"
@@ -112,7 +139,7 @@
         <Project
             link="https://maxwilson.co.uk/mototek/"
             title="Mototek - Company Website"
-            languages="HTML · CSS · JavaScript"
+            languages="Bootstrap · HTML · CSS · JavaScript"
             source="Website"
             icon="personal.png"
             image="mototek.png"
