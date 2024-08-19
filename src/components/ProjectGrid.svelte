@@ -17,7 +17,7 @@
                 notif_colour="#6256a5"
             />
             <Project
-                link="https://github.com/MaxJW/Monch"
+                link="https://monch.recipes/"
                 title="Monch - Recipe Manager"
                 languages="SvelteKit · TypeScript · TailwindCSS"
                 source="Website"
