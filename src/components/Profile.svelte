@@ -36,10 +36,9 @@
             }}
         >
             <h1 id="name">Max Wilson</h1>
-            <h2 id="title">Software Engineer</h2>
+            <h2 id="title">Full Stack Developer</h2>
             <h2 id="location">
-                <a id="work_link" href="https://adarma.com">Adarma Security</a> • Edinburgh, Scotland,
-                UK
+                <a id="work_link" href="https://hertilityhealth.com/">Hertility Health</a> • Fife, Scotland
             </h2>
         </div>
         <div
