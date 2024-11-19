@@ -6,13 +6,13 @@
     <div class="githublinks" id="projects">
         <div class="featured">
             <Project
-                link="https://new.myrentalcv.com/Login/Login"
-                title="MyRentalCV"
-                languages="C#.NET · ASP.NET Razor · HTML · CSS · JavaScript"
-                source="LettingWeb"
-                icon="LT.png"
-                image="MRCV.png"
-                image_webp="MRCV.webp"
+                link="https://adarma.com/socket-soc-platform/"
+                title="Socket Platform"
+                languages="Svelte · TypeScript · Ionic · Golang · Docker"
+                source="Adarma"
+                icon="adarma.png"
+                image="socket.png"
+                image_webp="socket.webp"
                 notif_text="Featured"
                 notif_colour="#6256a5"
             />
@@ -28,6 +28,15 @@
                 notif_colour="#f8d53a"
             />
         </div>
+        <Project
+            link="https://new.myrentalcv.com/Login/Login"
+            title="MyRentalCV"
+            languages="C#.NET · ASP.NET Razor · HTML · CSS · JavaScript"
+            source="LettingWeb"
+            icon="LT.png"
+            image="MRCV.png"
+            image_webp="MRCV.webp"
+        />
         <Project
             link="https://github.com/MaxJW/WeddingJeopardy"
             title="Wedding Jeopardy"

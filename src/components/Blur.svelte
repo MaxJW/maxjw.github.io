@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { clamp } from 'fractils';
-    /* Blur profile on scroll to projects? */
-    let y;
-    let opacityVal;
+
+    let y: number;
+    let opacityVal: number;
     let el: any = false;
 
     onMount(async () => {

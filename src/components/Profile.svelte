@@ -1,16 +1,15 @@
 <script lang="ts">
     import { OnMount } from 'fractils';
     import { fly } from 'svelte/transition';
-    import Fa from 'svelte-fa';
     import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
     import {
         faGithub,
         faLinkedin,
-        faXTwitter,
+        faBluesky,
         faYoutube,
         faInstagram,
-        faThreads,
     } from '@fortawesome/free-brands-svg-icons';
+    import Link from './Link.svelte';
 </script>
 
 <OnMount>
@@ -50,62 +49,42 @@
                 opacity: 0,
             }}
         >
-            <a
+            <Link
                 href="mailto:max@maxwilson.co.uk"
-                aria-label="Email link"
-                class="tooltip"
-                data-title="max@maxwilson.co.uk"
-            >
-                <Fa icon={faEnvelope} size="lg" />
-            </a>
-            <a
+                ariaLabel="Email"
+                tooltip="max@maxwilson.co.uk"
+                icon={faEnvelope}
+            />
+            <Link
                 href="https://github.com/MaxJW"
-                aria-label="GitHub link"
-                class="tooltip"
-                data-title="MaxJW"
-            >
-                <Fa icon={faGithub} size="lg" />
-            </a>
-            <a
+                ariaLabel="Github"
+                tooltip="MaxJW"
+                icon={faGithub}
+            />
+            <Link
                 href="https://linkedin.com/in/maxjwilson-1"
-                aria-label="LinkedIn link"
-                class="tooltip"
-                data-title="Max Wilson"
-            >
-                <Fa icon={faLinkedin} size="lg" />
-            </a>
-            <a
-                href="https://twitter.com/MaxJW_"
-                aria-label="Twitter link"
-                class="tooltip"
-                data-title="@MaxJW_"
-            >
-                <Fa icon={faXTwitter} size="lg" />
-            </a>
-            <a
-                href="https://threads.net/@maxjwilson_"
-                aria-label="Threads link"
-                class="tooltip"
-                data-title="@maxjwilson_"
-            >
-                <Fa icon={faThreads} size="lg" />
-            </a>
-            <a
+                ariaLabel="LinkedIn"
+                tooltip="Max Wilson"
+                icon={faLinkedin}
+            />
+            <Link
+                href="https://bsky.app/profile/maxwilson.co.uk"
+                ariaLabel="Bluesky"
+                tooltip="@maxwilson.co.uk"
+                icon={faBluesky}
+            />
+            <Link
                 href="https://instagram.com/maxjwilson_/"
-                aria-label="Instagram link"
-                class="tooltip"
-                data-title="maxjwilson_"
-            >
-                <Fa icon={faInstagram} size="lg" />
-            </a>
-            <a
+                ariaLabel="Instagram"
+                tooltip="maxjwilson_"
+                icon={faInstagram}
+            />
+            <Link
                 href="https://youtube.com/@MaxJW_"
-                aria-label="YouTube link"
-                class="tooltip"
-                data-title="@MaxJW_"
-            >
-                <Fa icon={faYoutube} size="lg" />
-            </a>
+                ariaLabel="YouTube"
+                tooltip="@MaxJW_"
+                icon={faYoutube}
+            />
         </div>
     </div>
 </OnMount>
@@ -170,56 +149,6 @@
         text-align: center;
         display: flex;
         justify-content: space-between;
-    }
-
-    /* setup tooltips */
-    .tooltip {
-        position: relative;
-    }
-    .tooltip:before,
-    .tooltip:after {
-        display: block;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-    }
-    .tooltip:after {
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid rgba(0, 0, 0, 0.75);
-        border-left: 6px solid transparent;
-        content: '';
-        height: 0;
-        top: 25px;
-        left: 5px;
-        width: 0;
-    }
-    .tooltip:before {
-        background: rgba(0, 0, 0, 0.75);
-        border-radius: 2px;
-        color: #fff;
-        content: attr(data-title);
-        font-size: 14px;
-        padding: 6px 10px;
-        top: 31px;
-        white-space: nowrap;
-    }
-
-    .tooltip:after,
-    .tooltip:before {
-        transform: translate3d(0, -10px, 0);
-        transition: all 0.15s ease-in-out;
-    }
-    .tooltip:hover:after,
-    .tooltip:hover:before {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-
-    a {
-        color: white;
-        cursor: pointer;
-        transition: 0.25s ease;
-        text-decoration: none;
     }
 
     #work_link {
