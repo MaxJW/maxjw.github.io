@@ -13,24 +13,31 @@ export interface ProjectConfig {
 
 export const projects: ProjectConfig[] = [
 	{
-		id: 'socket',
-		title: 'Socket Platform',
-		languages: ['Svelte', 'TypeScript', 'Ionic', 'Golang', 'Docker'],
-		organizationKey: 'adarma',
-		link: 'https://adarma.com/socket-soc-platform/',
-		featured: true,
-		notificationText: 'Featured',
-		notificationColor: '#6256a5'
-	},
-	{
 		id: 'monch',
 		title: 'Monch - Recipe Manager',
 		languages: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
 		organizationKey: 'personal',
 		link: 'https://monch.cooking/',
 		featured: true,
+		notificationText: 'Featured',
+		notificationColor: '#6256a5'
+	},
+	{
+		id: 'mindful',
+		title: 'Mindful Browsing Chrome Extension',
+		languages: ['JavaScript', 'HTML', 'CSS'],
+		organizationKey: 'personal',
+		link: 'https://github.com/MaxJW/MindfulBrowsing-ChromeExtension',
+		featured: true,
 		notificationText: 'Latest',
 		notificationColor: '#f8d53a'
+	},
+	{
+		id: 'socket',
+		title: 'Socket Platform',
+		languages: ['Svelte', 'TypeScript', 'Ionic', 'Golang', 'Docker'],
+		organizationKey: 'adarma',
+		link: 'https://adarma.com/socket-soc-platform/'
 	},
 	{
 		id: 'MRCV',

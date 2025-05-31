@@ -58,7 +58,7 @@
 		<source srcset={image_webp} type="image/webp" />
 		<source srcset={image} type="image/png" />
 		<img
-			class="block h-full w-full rounded-[10px] object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-125"
+			class="block h-full w-full rounded-[10px] object-cover object-top transition-transform duration-[600ms] ease-in-out group-hover:scale-125"
 			src={image}
 			alt="{title} Screenshot"
 			aria-label="{title} Screenshot"
