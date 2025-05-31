@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="group relative inline-grid aspect-[2/1] rounded-[10px] shadow-none transition-shadow duration-300 ease-in-out hover:shadow-[0px_0px_20px_#000000] max-[700px]:mb-5 {className}"
+	class="group relative inline-grid aspect-[2/1] rounded-[10px] shadow-none transition-shadow duration-300 ease-in-out hover:shadow max-[700px]:mb-5 {className}"
 >
 	{#if notif_text}
 		<div

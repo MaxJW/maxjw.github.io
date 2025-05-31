@@ -17,7 +17,7 @@
 
 {#if loaded}
 	<div
-		class="fixed inset-0 z-10 mx-auto flex h-screen max-w-fit flex-col items-center justify-center"
+		class="fixed inset-0 z-10 mx-auto flex h-screen max-w-fit flex-col items-center justify-center pb-20 md:pb-0"
 	>
 		<img
 			class="mb-6 block w-72 max-w-9/12 rounded-full shadow-none transition-all duration-250 hover:shadow-lg hover:shadow-black/30"
