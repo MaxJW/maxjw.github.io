@@ -41,10 +41,7 @@
 
 			<div class="mb-12 grid gap-8 md:grid-cols-2">
 				{#each featuredProjects as project, index}
-					<div
-						class="featured-card hover:-translate-y-2"
-						in:fly={{ y: 50, duration: 600, delay: 400 + index * 100 }}
-					>
+					<div class="featured-card" in:fly={{ y: 50, duration: 600, delay: 400 + index * 100 }}>
 						<ProjectCard {...project} variant="featured" />
 					</div>
 				{/each}
@@ -52,10 +49,7 @@
 
 			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{#each regularProjects as project, index}
-					<div
-						in:fly={{ y: 30, duration: 500, delay: 600 + index * 50 }}
-						class="project-item hover:-translate-y-1"
-					>
+					<div in:fly={{ y: 30, duration: 500, delay: 600 + index * 50 }} class="project-item">
 						<ProjectCard {...project} variant="compact" />
 					</div>
 				{/each}
@@ -69,7 +63,15 @@
 		transition: transform 0.3s ease;
 	}
 
+	.featured-card:hover {
+		transform: translateY(-8px);
+	}
+
 	.project-item {
 		transition: transform 0.3s ease;
+	}
+
+	.project-item:hover {
+		transform: translateY(-4px);
 	}
 </style>
