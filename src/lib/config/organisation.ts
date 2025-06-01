@@ -9,7 +9,7 @@ export const organisations: Record<string, Organization> = {
 		icon: '/images/icon-images/adarma.png'
 	},
 	personal: {
-		name: 'Website',
+		name: 'Personal',
 		icon: '/images/icon-images/personal.png'
 	},
 	uod: {
@@ -17,7 +17,7 @@ export const organisations: Record<string, Organization> = {
 		icon: '/images/icon-images/UoD.png'
 	},
 	lettingweb: {
-		name: 'LettingWeb',
+		name: 'Let Tech Solutions',
 		icon: '/images/icon-images/LT.png'
 	},
 	craneware: {

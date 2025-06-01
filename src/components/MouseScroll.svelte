@@ -1,10 +1,15 @@
 <script lang="ts">
 	function scrollIntoView() {
-		const el = document.getElementById('projects');
-		if (!el) return;
-		el.scrollIntoView({
-			behavior: 'smooth'
-		});
+		const aboutSection = document.getElementById('about');
+		if (aboutSection) {
+			aboutSection.scrollIntoView({ behavior: 'smooth' });
+		} else {
+			// Fallback: scroll to after the spacer div
+			window.scrollTo({
+				top: window.innerHeight,
+				behavior: 'smooth'
+			});
+		}
 	}
 </script>
 

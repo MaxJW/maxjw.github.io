@@ -15,7 +15,7 @@ export const projects: ProjectConfig[] = [
 	{
 		id: 'monch',
 		title: 'Monch - Recipe Manager',
-		languages: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
+		languages: ['SvelteKit', 'Firebase', 'TypeScript', 'Tailwind'],
 		organizationKey: 'personal',
 		link: 'https://monch.cooking/',
 		featured: true,
@@ -35,7 +35,7 @@ export const projects: ProjectConfig[] = [
 	{
 		id: 'socket',
 		title: 'Socket Platform',
-		languages: ['Svelte', 'TypeScript', 'Ionic', 'Golang', 'Docker'],
+		languages: ['Svelte', 'TypeScript', 'Ionic', 'Golang', 'Docker', 'AWS'],
 		organizationKey: 'adarma',
 		link: 'https://adarma.com/socket-soc-platform/'
 	},
@@ -49,14 +49,14 @@ export const projects: ProjectConfig[] = [
 	{
 		id: 'wedjeo',
 		title: 'Wedding Jeopardy',
-		languages: ['Svelte', 'JavaScript', 'HTML', 'CSS'],
+		languages: ['Svelte', 'HTML', 'CSS'],
 		organizationKey: 'personal',
 		link: 'https://github.com/MaxJW/WeddingJeopardy'
 	},
 	{
 		id: 'photochallenge',
 		title: 'Photo Challenges',
-		languages: ['Svelte', 'JavaScript', 'HTML', 'CSS'],
+		languages: ['Svelte', 'Firebase', 'HTML', 'CSS'],
 		organizationKey: 'personal',
 		link: 'https://github.com/MaxJW/GroomsmaidPhotoChallenge'
 	},
@@ -100,7 +100,7 @@ export const projects: ProjectConfig[] = [
 		title: 'OpenAirBooking',
 		languages: ['PHP', 'JavaScript', 'MySQL', 'HTML', 'CSS'],
 		organizationKey: 'uod',
-		link: 'https://zeno.computing.dundee.ac.uk/2018-ac32006/Team3/index.php'
+		link: 'https://github.com/MaxJW/OpenAirBooking'
 	},
 	{
 		id: 'fullstackreactnative',

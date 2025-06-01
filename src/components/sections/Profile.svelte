@@ -8,7 +8,7 @@
 		IconBrandInstagram,
 		IconBrandYoutube
 	} from '@tabler/icons-svelte';
-	import SocialLink from './SocialLink.svelte';
+	import SocialLink from '../SocialLink.svelte';
 	import { fly } from 'svelte/transition';
 
 	let loaded = $state(false);

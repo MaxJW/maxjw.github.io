@@ -4,7 +4,7 @@ import type { ProjectConfig } from '../config/projects.ts';
 export interface ProcessedProject {
 	link: string;
 	title: string;
-	languages: string;
+	languages: string[];
 	source: string;
 	icon: string;
 	image: string;
@@ -20,7 +20,7 @@ export function processProject(project: ProjectConfig): ProcessedProject {
 	return {
 		link: project.link,
 		title: project.title,
-		languages: project.languages.join(' · '),
+		languages: project.languages,
 		source: organization.name,
 		icon: organization.icon,
 		image: `/images/repo-images/${project.id}.png`,
