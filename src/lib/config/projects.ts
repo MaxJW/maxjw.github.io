@@ -15,7 +15,7 @@ export const projects: ProjectConfig[] = [
 	{
 		id: 'monch',
 		title: 'Monch - Recipe Manager',
-		languages: ['SvelteKit', 'Firebase', 'TypeScript', 'Tailwind'],
+		languages: ['SvelteKit', 'Firebase', 'Stripe', 'TypeScript', 'Tailwind'],
 		organizationKey: 'personal',
 		link: 'https://monch.cooking/',
 		featured: true,
@@ -23,15 +23,23 @@ export const projects: ProjectConfig[] = [
 		notificationColor: '#6256a5'
 	},
 	{
+		id: 'fantasysteam',
+		title: 'Fantasy Steam',
+		languages: ['SvelteKit', 'Firebase', 'TypeScript', 'Tailwind', 'Cloudflare', 'GitHub Actions'],
+		organizationKey: 'personal',
+		link: 'https://fantasysteam.com/',
+		featured: true,
+		notificationText: 'Featured',
+		notificationColor: '#00A1EF'
+	},
+	{
 		id: 'mindful',
 		title: 'Mindful Browsing Chrome Extension',
 		languages: ['JavaScript', 'HTML', 'CSS'],
 		organizationKey: 'personal',
-		link: 'https://github.com/MaxJW/MindfulBrowsing-ChromeExtension',
-		featured: true,
-		notificationText: 'Latest',
-		notificationColor: '#f8d53a'
+		link: 'https://github.com/MaxJW/MindfulBrowsing-ChromeExtension'
 	},
+
 	{
 		id: 'socket',
 		title: 'Socket Platform',

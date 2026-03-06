@@ -61,11 +61,5 @@
 	"background_color": "#13131d",
 	"display": "standalone",
 	"orientation": "portrait",
-	"categories": [
-		"personalization",
-		"personal",
-		"resume",
-		"portfolio",
-		"technology"
-	]
+	"categories": ["personalization", "personal", "resume", "portfolio", "technology"]
 }
