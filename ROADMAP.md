@@ -37,14 +37,14 @@ The 2026 redesign of maxwilson.co.uk. Design reference: the "A1.2a" board on the
 
 - [x] `wrangler.jsonc`: assets-only Worker named `maxwilson`, serving `./build`. The `maxwilson.co.uk` custom domain route is left out on purpose so test deploys only reach workers.dev; add `"routes": [{ "pattern": "maxwilson.co.uk", "custom_domain": true }]` back at the switch
 - [x] `static/_headers`: one-year immutable cache for `/_app/immutable/*`, security headers, noindex on workers.dev
-- [ ] First deploy (`npm run deploy`) and check it on the workers.dev URL
+- [x] First deploy checked on https://maxwilson.max-f43.workers.dev (headers, cache, 404, noindex, Lighthouse 100 for performance, accessibility and best practices)
 - [ ] Before switching DNS, confirm in Cloudflare that the subdomain sites (marvel, todo, photo, mpsheet, start, woodys) have their own records; the Worker only claims the apex, so they stay on GitHub Pages
 - [x] The three project sites served under the apex path (`/mototek/`, `/NoContextQuotes/`, `/tfthelper/`) are retired: Max is happy for them to stop working after the switch
 - [ ] Redirect `www.maxwilson.co.uk` to the apex with a Cloudflare redirect rule on the zone (Max agreed); GitHub Pages does this today, and an assets-only Worker cannot redirect by hostname
 - [ ] Optional, before launch: switch the site email to `me@maxwilson.co.uk` (one line, `email` in `content.ts`) once Email Routing has a `me@` route; keep the `max@` route, since accounts use it
-- [ ] Move `maxwilson.co.uk` to the Worker (replaces the DNS records that point at GitHub Pages)
-- [ ] Workers Builds (Cloudflare's Git integration, no Cloudflare API token): connect the repo on the `maxwilson` Worker; build command `npm run build:fresh`, deploy command `npx wrangler deploy`; build secret `GITHUB_TOKEN` (classic token, `read:user` only). Production branch `redesign` while testing, `main` after the merge
-- [ ] Daily rebuild: a deploy hook for the production branch, stored as the `DEPLOY_HOOK_URL` repo secret, called by `.github/workflows/daily-rebuild.yml`. GitHub pauses scheduled workflows after 60 days without repo activity; re-enable from the Actions tab
+- [ ] Move `maxwilson.co.uk` to the Worker: export DNS for rollback, delete the apex record that points at GitHub Pages (a Custom Domain cannot be created over an existing CNAME), then add the `routes` entry back to `wrangler.jsonc` and push; the Workers Builds token has Workers Routes edit on all zones, so the build attaches the domain
+- [x] Workers Builds connected to `main` (build `npm run build:fresh`, deploy `npx wrangler deploy`, build cache on, `GITHUB_TOKEN` build secret). `redesign` fast-forwarded into `main` on 2026-10-27; the first Cloudflare build fetched fresh contributions
+- [ ] Daily rebuild: create a deploy hook for `main` and store it as the `DEPLOY_HOOK_URL` repo secret; `.github/workflows/daily-rebuild.yml` calls it at 05:17 UTC. GitHub pauses scheduled workflows after 60 days without repo activity; re-enable from the Actions tab
 - [ ] Turn off GitHub Pages and stop committing `docs/`
 
 ## Phase 3: tidy up
