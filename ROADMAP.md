@@ -35,7 +35,7 @@ The 2026 redesign of maxwilson.co.uk. Design reference: the "A1.2a" board on the
 
 ## Phase 2: move hosting to Cloudflare (config ready, nothing deployed)
 
-- [x] `wrangler.jsonc`: assets-only Worker named `maxwilson`, serving `./build`. The `maxwilson.co.uk` custom domain route is left out on purpose so test deploys only reach workers.dev; add `"routes": [{ "pattern": "maxwilson.co.uk", "custom_domain": true }]` back at the switch
+- [x] `wrangler.jsonc`: assets-only Worker named `maxwilson`, serving `./build`. Custom domain `maxwilson.co.uk` via the `routes` entry, added back at the switch
 - [x] `static/_headers`: one-year immutable cache for `/_app/immutable/*`, security headers, noindex on workers.dev
 - [x] First deploy checked on https://maxwilson.max-f43.workers.dev (headers, cache, 404, noindex, Lighthouse 100 for performance, accessibility and best practices)
 - [ ] Before switching DNS, confirm in Cloudflare that the subdomain sites (marvel, todo, photo, mpsheet, start, woodys) have their own records; the Worker only claims the apex, so they stay on GitHub Pages
