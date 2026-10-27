@@ -5,5 +5,4 @@ yarn.lock
 bun.lock
 bun.lockb
 
-/docs
 src/lib/data/contributions.json
