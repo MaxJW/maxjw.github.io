@@ -46,7 +46,7 @@ The 2026 redesign of maxwilson.co.uk. Design reference: the "A1.2a" board on the
 ## Phase 3: tidy up
 
 - [x] Removed the old components, config, images (about 15 MB), favicons, `bun.lock`, `tailwind.config.ts`, `repomix-output.xml`, `src/app.d.ts`, the `@tabler/icons-svelte` dependency and the old built site in `docs/`
-- [ ] Delete the `redesign` branch (identical to `main`): `git branch -d redesign && git push origin --delete redesign`
+- [x] Deleted the `redesign` branch after it was merged into `main`
 
 ## Phase 4: keep it current
 
