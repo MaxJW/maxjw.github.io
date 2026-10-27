@@ -9,6 +9,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:fresh": "npm run contributions && npm run build",
 		"preview": "vite preview",
 		"deploy": "npm run build && wrangler deploy",
 		"contributions": "node scripts/contributions.mjs",

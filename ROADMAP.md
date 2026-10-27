@@ -43,7 +43,8 @@ The 2026 redesign of maxwilson.co.uk. Design reference: the "A1.2a" board on the
 - [ ] Redirect `www.maxwilson.co.uk` to the apex with a Cloudflare redirect rule on the zone (Max agreed); GitHub Pages does this today, and an assets-only Worker cannot redirect by hostname
 - [ ] Optional, before launch: switch the site email to `me@maxwilson.co.uk` (one line, `email` in `content.ts`) once Email Routing has a `me@` route; keep the `max@` route, since accounts use it
 - [ ] Move `maxwilson.co.uk` to the Worker (replaces the DNS records that point at GitHub Pages)
-- [ ] GitHub Actions workflow: build and `wrangler deploy` on every push to `main`, plus a daily run that refreshes the contributions snapshot first (public repo, so standard runners are free). Secrets: a Cloudflare API token and account ID, and a GitHub token for the contributions script
+- [ ] Workers Builds (Cloudflare's Git integration, no Cloudflare API token): connect the repo on the `maxwilson` Worker; build command `npm run build:fresh`, deploy command `npx wrangler deploy`; build secret `GITHUB_TOKEN` (classic token, `read:user` only). Production branch `redesign` while testing, `main` after the merge
+- [ ] Daily rebuild: a deploy hook for the production branch, stored as the `DEPLOY_HOOK_URL` repo secret, called by `.github/workflows/daily-rebuild.yml`. GitHub pauses scheduled workflows after 60 days without repo activity; re-enable from the Actions tab
 - [ ] Turn off GitHub Pages and stop committing `docs/`
 
 ## Phase 3: tidy up
@@ -53,6 +54,6 @@ The 2026 redesign of maxwilson.co.uk. Design reference: the "A1.2a" board on the
 
 ## Phase 4: keep it current
 
-- [ ] Daily contributions refresh, via the Phase 2 workflow: it deploys directly rather than committing the JSON. The script keeps the last snapshot when the newest 21 days are empty
+- [x] Daily contributions refresh: `npm run build:fresh` refreshes the snapshot on every Cloudflare build; the script keeps the last snapshot if GitHub is unreachable, the token is missing, or the newest 21 days are empty
 - [ ] Max's intro (`intro` in `src/lib/content.ts`, hidden while empty)
 - [ ] Optional: one public number for the Hertility role

@@ -5,12 +5,19 @@ const quietDaysBeforeKeepingSnapshot = 21;
 const dayInMs = 24 * 60 * 60 * 1000;
 const yearInMs = 365 * dayInMs;
 
+function keepSnapshot(reason) {
+	if (!existsSync(snapshotFile)) {
+		console.error(`${reason}, and there is no snapshot to fall back on.`);
+		process.exit(1);
+	}
+	const kept = JSON.parse(readFileSync(snapshotFile, 'utf8'));
+	console.warn(`${reason}; keeping the snapshot from ${kept.to}.`);
+	process.exit(0);
+}
+
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
-	console.error(
-		'GITHUB_TOKEN is not set. Try: GITHUB_TOKEN=$(gh auth token) npm run contributions'
-	);
-	process.exit(1);
+	keepSnapshot('GITHUB_TOKEN is not set (try GITHUB_TOKEN=$(gh auth token) npm run contributions)');
 }
 
 async function fetchCalendar(range = '') {
@@ -29,15 +36,9 @@ async function fetchCalendar(range = '') {
 		headers: { Authorization: `bearer ${token}`, 'Content-Type': 'application/json' },
 		body: JSON.stringify({ query })
 	});
-	if (!response.ok) {
-		console.error(`GitHub responded ${response.status}: ${await response.text()}`);
-		process.exit(1);
-	}
+	if (!response.ok) throw new Error(`GitHub responded ${response.status}`);
 	const { data, errors } = await response.json();
-	if (errors) {
-		console.error(errors);
-		process.exit(1);
-	}
+	if (errors) throw new Error(`GitHub returned errors: ${JSON.stringify(errors)}`);
 	const calendar = data.viewer.contributionsCollection.contributionCalendar;
 	return {
 		total: calendar.totalContributions,
@@ -45,31 +46,33 @@ async function fetchCalendar(range = '') {
 	};
 }
 
-const lastYear = await fetchCalendar();
-const lastYearStart = new Date(`${lastYear.days[0].date}T00:00:00Z`).getTime();
-const yearBefore = await fetchCalendar(
-	`(from: "${new Date(lastYearStart - yearInMs).toISOString()}", to: "${new Date(lastYearStart - 1000).toISOString()}")`
-);
+async function fetchTwoYears() {
+	const lastYear = await fetchCalendar();
+	const lastYearStart = new Date(`${lastYear.days[0].date}T00:00:00Z`).getTime();
+	const yearBefore = await fetchCalendar(
+		`(from: "${new Date(lastYearStart - yearInMs).toISOString()}", to: "${new Date(lastYearStart - 1000).toISOString()}")`
+	);
+	const lastYearDates = new Set(lastYear.days.map((day) => day.date));
+	return {
+		total: lastYear.total,
+		days: [...yearBefore.days.filter((day) => !lastYearDates.has(day.date)), ...lastYear.days]
+	};
+}
 
-const lastYearDates = new Set(lastYear.days.map((day) => day.date));
-const days = [...yearBefore.days.filter((day) => !lastYearDates.has(day.date)), ...lastYear.days];
+const { total, days } = await fetchTwoYears().catch((error) =>
+	keepSnapshot(`Could not fetch contributions (${error.message})`)
+);
 
 const recentlyQuiet = days
 	.slice(-quietDaysBeforeKeepingSnapshot)
 	.every((day) => day.contributionCount === 0);
 
-if (existsSync(snapshotFile) && recentlyQuiet) {
-	const kept = JSON.parse(readFileSync(snapshotFile, 'utf8'));
-	console.log(
-		`Last ${quietDaysBeforeKeepingSnapshot} days are empty; keeping the snapshot from ${kept.to}.`
-	);
-	process.exit(0);
-}
+if (recentlyQuiet) keepSnapshot(`The last ${quietDaysBeforeKeepingSnapshot} days are empty`);
 
 const snapshot = {
 	from: days[0].date,
 	to: days.at(-1).date,
-	total: lastYear.total,
+	total,
 	counts: days.map((day) => day.contributionCount)
 };
 
