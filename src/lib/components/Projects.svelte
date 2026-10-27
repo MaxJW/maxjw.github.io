@@ -3,11 +3,21 @@
 	import invites from '#lib/assets/projects/invites.jpg?w=1280;960;720;480&quality=80&enhanced';
 	import monch from '#lib/assets/projects/monch.jpg?w=1280;960;720;480&quality=80&enhanced';
 	import paintnotnet from '#lib/assets/projects/paintnotnet.jpg?w=1280;960;720;480&quality=80&enhanced';
+	import fantasysteamPlaceholder from '#lib/assets/projects/fantasysteam.jpg?w=24&format=webp&quality=50&inline';
+	import invitesPlaceholder from '#lib/assets/projects/invites.jpg?w=24&format=webp&quality=50&inline';
+	import monchPlaceholder from '#lib/assets/projects/monch.jpg?w=24&format=webp&quality=50&inline';
+	import paintnotnetPlaceholder from '#lib/assets/projects/paintnotnet.jpg?w=24&format=webp&quality=50&inline';
 	import { projects, type Project } from '#lib/content.ts';
 	import Icon from './Icon.svelte';
 	import Stack from './Stack.svelte';
 
 	const images = { monch, fantasysteam, paintnotnet, invites };
+	const placeholders = {
+		monch: monchPlaceholder,
+		fantasysteam: fantasysteamPlaceholder,
+		paintnotnet: paintnotnetPlaceholder,
+		invites: invitesPlaceholder
+	};
 
 	const [lead, ...rest] = projects;
 </script>
@@ -25,7 +35,13 @@
 {/snippet}
 
 {#snippet shot(project: Project, sizes: string)}
-	<a class="shot" href={project.url} tabindex="-1" aria-hidden="true">
+	<a
+		class="shot"
+		href={project.url}
+		tabindex="-1"
+		aria-hidden="true"
+		style:--placeholder="url({placeholders[project.id]})"
+	>
 		<enhanced:img src={images[project.id]} alt={project.alt} {sizes} loading="lazy" />
 	</a>
 {/snippet}
@@ -122,6 +138,7 @@
 	}
 
 	.shot {
+		position: relative;
 		display: block;
 		width: 100%;
 		overflow: clip;
@@ -130,7 +147,17 @@
 		box-shadow: 0 24px 60px rgb(0 0 0 / 0.4);
 	}
 
+	.shot::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: var(--placeholder) center top / cover;
+		filter: blur(12px);
+		transform: scale(1.1);
+	}
+
 	.shot :global(img) {
+		position: relative;
 		width: 100%;
 		height: auto;
 		aspect-ratio: 16 / 10;
