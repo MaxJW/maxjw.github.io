@@ -56,42 +56,6 @@
 		}
 	}
 
-	@media (width < 768px) {
-		svg {
-			--offscreen-weeks: 40;
-		}
-	}
-
-	@media (768px <= width < 1024px) {
-		svg {
-			--offscreen-weeks: 32;
-		}
-	}
-
-	@media (1024px <= width < 1280px) {
-		svg {
-			--offscreen-weeks: 25;
-		}
-	}
-
-	@media (1280px <= width < 1440px) {
-		svg {
-			--offscreen-weeks: 20;
-		}
-	}
-
-	@media (1440px <= width < 1920px) {
-		svg {
-			--offscreen-weeks: 19;
-		}
-	}
-
-	@media (1920px <= width < 2560px) {
-		svg {
-			--offscreen-weeks: 6;
-		}
-	}
-
 	@keyframes -global-week-in {
 		from {
 			opacity: 0;
