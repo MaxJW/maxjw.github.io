@@ -10,9 +10,9 @@
 			<li class="reveal">
 				<a class="row" href={item.url}>
 					<span class="text-muted font-mono text-sm">{item.year}</span>
-					<span class="text-[19px] font-semibold">{item.name}</span>
-					<span class="text-soft hidden text-[17px] md:block">{item.summary}</span>
-					<span class="text-muted hidden text-[15px] md:block">{item.stack}</span>
+					<span class="text-item font-semibold">{item.name}</span>
+					<span class="text-soft text-body hidden md:block">{item.summary}</span>
+					<span class="text-muted text-meta hidden md:block">{item.stack}</span>
 					<span class="arrow"><Icon name="arrow" size={18} /></span>
 				</a>
 			</li>
@@ -43,7 +43,7 @@
 	}
 
 	.row:hover {
-		color: #fff;
+		color: var(--color-white);
 	}
 
 	.row:hover::before {

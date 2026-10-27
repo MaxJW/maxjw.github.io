@@ -15,7 +15,6 @@
 <style>
 	svg {
 		--offscreen-weeks: 0;
-		display: block;
 		overflow: visible;
 		fill: var(--color-level-0);
 

@@ -18,14 +18,14 @@
 	{#each roles as role (role.company)}
 		<article class="role">
 			<div class="side">
-				<h3 class="text-[28px] font-semibold">
+				<h3 class="text-title font-semibold">
 					<a href={role.url} class="text-text hover:text-white">{role.company}</a>
 				</h3>
-				<p class="text-soft mt-1.5 text-[17px]">{role.title}</p>
+				<p class="text-soft text-body mt-1.5">{role.title}</p>
 				<p class="text-muted mt-3.5 font-mono text-sm leading-relaxed">
 					{role.period}<br />{role.location}
 				</p>
-				{#if role.note}<p class="text-muted mt-3 text-[15px]">{role.note}</p>{/if}
+				{#if role.note}<p class="text-muted text-meta mt-3">{role.note}</p>{/if}
 				<span class="read" aria-hidden="true"><span></span></span>
 			</div>
 			<div>
@@ -40,7 +40,7 @@
 
 	<article class="role border-line border-b">
 		<div class="side">
-			<h3 class="text-[28px] font-semibold">{education.school}</h3>
+			<h3 class="text-title font-semibold">{education.school}</h3>
 		</div>
 		<div>
 			<p class="text-xl">{education.degree}</p>
@@ -119,7 +119,7 @@
 	li {
 		position: relative;
 		padding-left: 22px;
-		font-size: 17px;
+		font-size: var(--text-body);
 		line-height: 1.55;
 		color: var(--color-soft);
 	}

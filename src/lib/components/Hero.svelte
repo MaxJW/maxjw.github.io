@@ -93,7 +93,6 @@
 		right: var(--tile-right);
 		width: var(--tile-size);
 		aspect-ratio: 1;
-		box-sizing: border-box;
 		border: var(--scaled-gap) solid var(--color-ink);
 		border-radius: calc(16px * var(--zoom));
 		background: var(--color-ink);
@@ -113,7 +112,6 @@
 
 	.photo {
 		position: relative;
-		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -163,7 +161,7 @@
 	}
 
 	.icon:hover {
-		color: #fff;
+		color: var(--color-white);
 		border-color: var(--color-accent);
 		transform: translateY(-2px);
 	}

@@ -61,7 +61,7 @@
 		align-items: baseline;
 		gap: 0.3em;
 		font-family: var(--font-mono);
-		font-size: 52px;
+		font-size: var(--text-figure);
 		font-weight: 500;
 		line-height: 1.1;
 		letter-spacing: -0.03em;
@@ -89,7 +89,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 10px;
-		font-size: 17px;
+		font-size: var(--text-body);
 		font-weight: 500;
 		color: var(--color-soft);
 		white-space: nowrap;

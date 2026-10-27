@@ -4,6 +4,6 @@
 
 {#if intro}
 	<section class="page pt-28">
-		<p class="text-soft max-w-[820px] text-[28px] leading-snug">{intro}</p>
+		<p class="text-soft text-title max-w-205 leading-snug">{intro}</p>
 	</section>
 {/if}

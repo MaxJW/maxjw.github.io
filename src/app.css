@@ -41,6 +41,14 @@
 	--font-sans: 'Figtree Variable', ui-sans-serif, system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
+	--text-caption: 13px;
+	--text-meta: 15px;
+	--text-body: 17px;
+	--text-item: 19px;
+	--text-title: 28px;
+	--text-headline: 44px;
+	--text-figure: 52px;
+
 	--container-page: 1200px;
 	--spacing-gutter: 24px;
 
@@ -53,12 +61,11 @@
 	max-width: var(--container-page);
 	margin-inline: auto;
 	padding-inline: var(--spacing-gutter);
-	box-sizing: border-box;
 }
 
 @utility label {
 	font-family: var(--font-mono);
-	font-size: 13px;
+	font-size: var(--text-caption);
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--color-muted);
@@ -80,7 +87,6 @@
 	}
 
 	body {
-		margin: 0;
 		background-color: var(--color-ink);
 		color: var(--color-text);
 		font-family: var(--font-sans);
@@ -128,7 +134,7 @@
 
 	::selection {
 		background: var(--color-level-2);
-		color: #fff;
+		color: var(--color-white);
 	}
 
 	section[id] {

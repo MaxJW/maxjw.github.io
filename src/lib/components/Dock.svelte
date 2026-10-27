@@ -12,7 +12,7 @@
 			loading="lazy"
 			class="size-9 rounded-full object-cover"
 		/>
-		<span class="text-[17px] font-semibold">Max Wilson</span>
+		<span class="text-body font-semibold">Max Wilson</span>
 	</a>
 	<nav aria-label="Sections" class="ml-auto flex gap-5 sm:gap-7">
 		<a class="nav" href="#work">Work</a>
@@ -58,7 +58,7 @@
 	.nav {
 		position: relative;
 		color: var(--color-soft);
-		font-size: 15px;
+		font-size: var(--text-meta);
 		font-weight: 500;
 		padding: 12px 0;
 	}
@@ -75,7 +75,7 @@
 	}
 
 	.nav:hover {
-		color: #fff;
+		color: var(--color-white);
 	}
 
 	.nav:hover::after {

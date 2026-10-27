@@ -7,7 +7,7 @@
 	<a class="mail" href="mailto:{email}">{email}</a>
 	<nav aria-label="Elsewhere" class="mt-12 flex flex-wrap gap-x-7 gap-y-2">
 		{#each links.filter((link) => link.icon !== 'mail') as link (link.href)}
-			<a class="text-muted py-2 text-[15px] hover:text-white" href={link.href}>{link.label}</a>
+			<a class="text-muted text-meta py-2 hover:text-white" href={link.href}>{link.label}</a>
 		{/each}
 	</nav>
 </footer>
@@ -27,7 +27,7 @@
 	}
 
 	.mail:hover {
-		color: #fff;
+		color: var(--color-white);
 		background-size: 100% 3px;
 	}
 </style>

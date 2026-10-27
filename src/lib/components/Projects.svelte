@@ -36,7 +36,7 @@
 	<article class="lead" style:--accent={lead.color}>
 		<div class="text">
 			<span class="bar" aria-hidden="true"></span>
-			<h3 class="text-[44px] leading-none font-semibold tracking-tight">{lead.name}</h3>
+			<h3 class="text-headline leading-none font-semibold tracking-tight">{lead.name}</h3>
 			<p class="text-soft mt-5 text-xl leading-relaxed">{lead.summary}</p>
 			{@render details(lead)}
 		</div>
@@ -51,8 +51,8 @@
 					'(min-width: 1200px) 368px, (min-width: 900px) 31vw, calc(100vw - 48px)'
 				)}
 				<span class="bar mt-8" aria-hidden="true"></span>
-				<h3 class="text-[28px] leading-tight font-semibold tracking-tight">{project.name}</h3>
-				<p class="text-soft mt-3 text-[17px] leading-relaxed">{project.summary}</p>
+				<h3 class="text-title leading-tight font-semibold tracking-tight">{project.name}</h3>
+				<p class="text-soft text-body mt-3 leading-relaxed">{project.summary}</p>
 				{@render details(project)}
 			</article>
 		{/each}
@@ -131,7 +131,6 @@
 	}
 
 	.shot :global(img) {
-		display: block;
 		width: 100%;
 		height: auto;
 		aspect-ratio: 16 / 10;

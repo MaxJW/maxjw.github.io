@@ -26,7 +26,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
-		font-size: 15px;
+		font-size: var(--text-meta);
 		color: var(--color-muted);
 		transition: color 0.25s ease;
 	}
