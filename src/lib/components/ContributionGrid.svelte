@@ -14,6 +14,7 @@
 
 <style>
 	svg {
+		--offscreen-weeks: 0;
 		display: block;
 		overflow: visible;
 		fill: var(--color-level-0);
@@ -37,7 +38,7 @@
 
 			g {
 				animation: week-in 0.8s var(--ease-glide) both;
-				animation-delay: calc(100ms + var(--entrance) * 16ms);
+				animation-delay: calc(100ms + max(0, var(--entrance) - var(--offscreen-weeks)) * 16ms);
 			}
 
 			@media (hover: hover) {
@@ -52,6 +53,42 @@
 					transition-duration: 0.18s;
 				}
 			}
+		}
+	}
+
+	@media (width < 768px) {
+		svg {
+			--offscreen-weeks: 40;
+		}
+	}
+
+	@media (768px <= width < 1024px) {
+		svg {
+			--offscreen-weeks: 32;
+		}
+	}
+
+	@media (1024px <= width < 1280px) {
+		svg {
+			--offscreen-weeks: 25;
+		}
+	}
+
+	@media (1280px <= width < 1440px) {
+		svg {
+			--offscreen-weeks: 20;
+		}
+	}
+
+	@media (1440px <= width < 1920px) {
+		svg {
+			--offscreen-weeks: 19;
+		}
+	}
+
+	@media (1920px <= width < 2560px) {
+		svg {
+			--offscreen-weeks: 6;
 		}
 	}
 

@@ -19,5 +19,5 @@
 /apple-touch-icon.png
   Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
 
-https://:subdomain.workers.dev/*
+https://:worker.:account.workers.dev/*
   X-Robots-Tag: noindex
